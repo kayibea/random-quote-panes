@@ -2,9 +2,11 @@
   "name": "random-quote-panes",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://kayibea.github.io/random-quote-panes",
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsc"
+    "build": "tsc &&  cpx \"src/static/**/*\" dist",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "prettier": {
     "semi": true,
@@ -22,6 +24,8 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "cpx": "^1.5.0",
+    "gh-pages": "^6.3.0",
     "typescript": "^5.8.3"
   }
 }
