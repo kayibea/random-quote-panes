@@ -1,0 +1,27 @@
+{
+  "name": "random-quote-panes",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
