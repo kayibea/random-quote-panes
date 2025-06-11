@@ -109,7 +109,7 @@ function pushNewQuote(quotes, text, author) {
     cardElm.appendChild(authorElm);
     quotes.push(cardElm);
     if (quotes.length > MAX_QUOTE_NODE_ELEMENTS) {
-        const quote = quotes.pop();
+        const quote = quotes.shift();
         if (quote)
             removeQuoteElement(quote);
     }
@@ -151,7 +151,7 @@ function animate() {
             velX = v.x;
             velY = v.y;
         }
-        else if (position.y + rect.height > window.innerWidth) {
+        else if (position.y + rect.height > window.innerHeight) {
             const v = reflect({ x: velX, y: velY }, normal.bottom);
             velX = v.x;
             velY = v.y;
