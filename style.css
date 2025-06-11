@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e1e2f;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.board {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  /* padding: 2rem; */
+  overflow: hidden;
+  /* background-color: red; */
+}
+
+.quote-card {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 250px;
+  background: #2a2a40;
+  border: 1px solid #444;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+  scale: 0;
+  animation: scalein 1s forwards;
+}
+
+@keyframes scalein {
+  from {
+    scale: initial;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+.quote-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.quote-text {
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-bottom: 1rem;
+}
+
+.quote-author {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: right;
+}
+
+.fetch-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  z-index: 2;
+  right: 1.5rem;
+  background: #3a3a5a;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease;
+}
+
+.fetch-btn:hover {
+  background: #505073;
+}
+
+@keyframes scaleout {
+  from {
+    scale: initial;
+  }
+  to {
+    scale: 0;
+  }
+}
