@@ -34,17 +34,11 @@ body {
   cursor: grab;
   user-select: none;
   transition: box-shadow 0.2s ease;
-  scale: 0;
-  animation: scalein 1s forwards;
 }
 
-@keyframes scalein {
-  from {
-    scale: initial;
-  }
-  to {
-    scale: 1;
-  }
+.quote-card:last-child {
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .quote-card:hover {
@@ -81,6 +75,21 @@ body {
 
 .fetch-btn:hover {
   background: #505073;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
 }
 
 @keyframes scaleout {
